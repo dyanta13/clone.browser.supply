@@ -1,16 +1,9 @@
-import { Hero } from "@/components/home/Hero";
-import { Recommendations } from "@/components/home/Recommendations";
-import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
-
+import { Main } from "@/components/home/Main";
 
 export default function Home() {
   return (
   <>
-        <Navbar/>
-        <Hero/>
-        <Recommendations/>
-        <Footer/>
+        <Main/>
   </>
   );
 }

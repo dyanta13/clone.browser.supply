@@ -6,6 +6,8 @@ import bgImage from "@/public/background.avif"
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import SmoothScroll from "@/styles/SmoothScroll"; // Sesuaikan path-nya
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Browser Supply Clone",
@@ -54,22 +56,25 @@ export default function RootLayout({
     >
       <body className="min-h-screen text-white relative overflow-x-hidden px-4 sm:px-8 antialiased">
           <SmoothScroll>
+          <Navbar/>
           <div className="fixed inset-0 z-0 pointer-events-none opacity-45">
-          <div className="absolute top-0 left-0 w-full h-[140vh]">
-            <Image
-              src={bgImage}
-              alt="Top Ambient Background"
-              fill
-              priority
-              placeholder="blur"
-              className="object-cover object-top blur-[30px] rotate-180 scale-120"
-            />
+            <div className="absolute top-0 left-0 w-full h-[140vh]">
+              <Image
+                src={bgImage}
+                alt="Top Ambient Background"
+                fill
+                priority
+                placeholder="blur"
+                className="object-cover object-top blur-[30px] rotate-180 scale-120"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="max-w-7xl mx-auto min-h-screen bg-transparent flex flex-col">
-          {children}
-        </div>
+          <div className="max-w-7xl mx-auto min-h-screen bg-transparent flex flex-col">
+            {children}
+          </div>
+          
+          <Footer/>
         </SmoothScroll>
       </body>
     </html>

@@ -5,7 +5,7 @@ export const navigation = [
   },
   {
     title: "Live Examples",
-    href: "#liveexamples",
+    href: "/Livetemplates",
   },
   {
     title: "Support",

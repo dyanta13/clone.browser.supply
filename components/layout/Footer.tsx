@@ -65,17 +65,16 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full border-b-[0.5px] border-solid border-zinc-800/40 justify-center" />
+      <div className="w-full border-b-[0.5px] border-solid border-zinc-800/40" />
 
-      <div className="w-full px-6 py-6 sm:px-8 md:px-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-transparent text-xs text-zinc-500">
-        
-        <p className="text-[15px] font-normal items-center md:items-start justify-center">
+      <div className="w-full px-6 py-6 sm:px-8 md:px-12 flex flex-col items-center justify-center text-center space-y-4 md:flex-row md:justify-between md:items-center md:text-left md:space-y-0 bg-transparent text-xs text-zinc-500">
+        <p className="text-[15px] font-normal items-center md:items-start justify-between">
           © 2026 browser.supply. <span className="text-zinc-300 font-normal">Framer</span> website templates
         </p>
 
-        <div className="flex gap-2.5 md:items-start justify-center">
+        <div className="flex flex-wrap gap-2.5 md:items-start items-center justify-center">
           <span className="text-[15px] font-normal text-zinc-500 mt-2">Created by</span>
-          <div className="flex items-center pl-1 py-1 backdrop-blur-sm hover:border-zinc-700 transition cursor-pointer select-none">
+          <div className="flex items-center justify-center pl-1 py-1 backdrop-blur-sm hover:border-zinc-700 transition cursor-pointer select-none">
             <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-zinc-700/50">
               <Image
                 src={avatarImg}
@@ -85,7 +84,7 @@ export const Footer = () => {
               />
             </div>
           </div>
-          <span className="text-[15px] font-normal text-center text-zinc-300 mt-2">Ramish Aziz</span>
+          <span className="text-[15px] font-normal text-center text-white mt-2">Ramish Aziz</span>
         </div>
 
       </div>

@@ -16,7 +16,7 @@ const templates: Template[] = Template;
 
 const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
   return (
-    <section className="w-full relative z-20 flex flex-col border-t-[0.5px] border-solid border-x border-zinc-700/20 mt-10">
+    <section className="w-full relative z-20 flex flex-col border-t-[0.5px] border-solid border-x border-zinc-800/50">
       
       {/* Header Section */}
       <div className="px-6 md:px-12 pt-20 pb-12 text-left">
@@ -34,7 +34,6 @@ const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
         className="grid grid-cols-1 md:grid-cols-3 w-full bg-transparent">
         
         {templates.map((template, index) => {
-            // Logika border agar garisnya rapi secara responsif
             const isNotLastColumn = index < templates.length - 1;
             // Logika pembatas vertikal hanya aktif di desktop untuk kolom 1 dan 2
             const isNotLastInRow = (index + 1) % 3 !== 0; 
@@ -47,25 +46,23 @@ const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
                 ${isNotLastInRow && isNotLastColumn ? 'md:border-r-[0.5px]' : ''}
                 `}>
                 
-                {/* Konten Internal Card */}
-                <div className="w-full h-full p-6 sm:p-8 flex flex-col transition-transform duration-500 ease-out group-hover:-translate-y-3 cursor-pointer z-10 relative">
+                {/* Card */}
+                <div className="w-full h-full p-6 sm:p-8 flex flex-col transition-transform duration-500 cursor-pointer z-10 relative">
                 
-                <div className="w-full h-auto bg-zinc-900/20 rounded-lg overflow-hidden border border-zinc-850/60 p-1 mb-6 aspect-16/10 relative">
+                <div className="w-full h-auto bg-zinc-900/20 rounded-lg overflow-hidden ease-out group-hover:-translate-y-3 transition-all p-1 mb-6 aspect-16/10 relative">
                     <Image 
                     src={template.thumbnail_url} 
                     alt={template.name}
                     fill
                     sizes="(max-w-768px) 100vw, 33vw"
-                    className="rounded object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className="rounded object-cover transition-transform duration-700"
                     />
                 </div>
 
-                {/* Judul Template (Aman & Lebar di Mobile) */}
                 <h3 className="text-xl md:text-[30px] font-sans font-normal text-zinc-200 mb-4 group-hover:text-white transition">
                     {template.name}
                 </h3>
 
-                {/* Kategori & Harga */}
                 <div className="flex items-center gap-2 text-[12px] tracking-widest text-zinc-500 font-medium uppercase mt-auto">
                     <span>{template.category}</span>
                     <span>•</span>
@@ -78,7 +75,6 @@ const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
 
                 </div>
 
-                {/* Efek Hover Glow Background */}
                 <div className="absolute inset-0 bg-linear-to-t from-zinc-800/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
 
             </div>

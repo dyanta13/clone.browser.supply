@@ -13,8 +13,8 @@ export interface FooterDataStructure {
 // Data statis yang diekspor
 export const footerData: FooterDataStructure = {
   column1: [
-    { title: "Templates", href: "#" },
-    { title: "Live examples", href: "#" },
+    { title: "Templates", href: "/" },
+    { title: "Live examples", href: "/Livetemplates" },
     { title: "Bundle", href: "#" },
     { title: "Blog", href: "#" }
   ],
