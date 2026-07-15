@@ -25,7 +25,7 @@ export const Faqs = ({ question, answer }: FAQsProps) => {
         <motion.div
           animate={{ rotate: isOpen ? 135 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="text-zinc-400 group-hover:text-white text-2xl font-light pr-2 flex-shrink-0"
+          className="text-zinc-400 group-hover:text-white text-2xl font-light pr-2 shrink-0"
         >
           +
         </motion.div>

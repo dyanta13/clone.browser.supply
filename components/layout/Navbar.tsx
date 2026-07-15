@@ -30,7 +30,7 @@ export const Navbar = () => {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0  w-full h-20 z-50 transition-all duration-300${
+      className={`fixed top-0 left-0 w-full h-20 z-50 transition-all duration-300${
         isScroll
           ? "bg-transparent backdrop-blur-[20px] mask-progressive-blur z-40"
           : "bg-transparent md:backdrop-blur-[2px] backdrop-blur-[2px]"
@@ -87,7 +87,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -25 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden h-screen bg-transparent backdrop-blur-[25px] border-t border-white/10 shadow-2xl"
+            className="md:hidden h-screen bg-transparent backdrop-blur-[20px] border-t border-white/10 shadow-2xl"
           >
             <div className="flex flex-col px-6 py-8 space-y-6">
               {navigation.map((item) => (
