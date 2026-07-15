@@ -16,11 +16,11 @@ export const footerData: FooterDataStructure = {
     { title: "Templates", href: "/" },
     { title: "Live examples", href: "/Livetemplates" },
     { title: "Bundle", href: "#" },
-    { title: "Blog", href: "#" }
+    { title: "Blog", href: "/Blogs" }
   ],
   column2: [
     { title: "Quiz", href: "#" },
-    { title: "Support", href: "#" },
+    { title: "Support", href: "/Support" },
     { title: "Privacy", href: "#" }
   ]
 };

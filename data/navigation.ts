@@ -9,10 +9,10 @@ export const navigation = [
   },
   {
     title: "Support",
-    href: "#support",
+    href: "/Support",
   },
   {
     title: "Blog",
-    href: "#blog",
+    href: "/Blogs",
   },
 ];

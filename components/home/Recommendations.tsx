@@ -1,6 +1,7 @@
 "use client";
 import { Template } from "@/data/Template";
 import Image from "next/image";
+import { PricingSection } from "./PricingSection";
 
 interface Template {
   id: string;
@@ -16,9 +17,9 @@ const templates: Template[] = Template;
 
 const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
   return (
+    <>
     <section className="w-full relative z-20 flex flex-col border-t-[0.5px] border-solid border-x border-zinc-800/50">
       
-      {/* Header Section */}
       <div className="px-6 md:px-12 pt-20 pb-12 text-left">
         <h2 className="text-3xl md:text-5xl font-sans font-normal tracking-tight text-zinc-100 mb-4">
           You may also like
@@ -30,9 +31,7 @@ const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
 
       <div className="w-full border-b-[0.5px] border-solid border-zinc-800/40" />
 
-      <div 
-        className="grid grid-cols-1 md:grid-cols-3 w-full bg-transparent">
-        
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full bg-transparent">
         {templates.map((template, index) => {
             const isNotLastColumn = index < templates.length - 1;
             // Logika pembatas vertikal hanya aktif di desktop untuk kolom 1 dan 2
@@ -94,7 +93,9 @@ const columnsCount = templates.length > 0 ? Math.min(templates.length, 3) : 1;
 
       </div>
       <div className="w-full border-b-[0.5px] border-solid border-zinc-800/40" />
-
     </section>
+
+    <PricingSection/>
+    </>
   );
 }

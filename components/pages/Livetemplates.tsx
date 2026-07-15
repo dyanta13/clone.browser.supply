@@ -3,6 +3,7 @@
 import { LiveTemplates } from "@/data/LiveTemplates";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LazyVideo } from "@/styles/LazyVideo";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -84,12 +85,8 @@ export default function Livetemplates() {
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition duration-300 z-10" />
                     
                     {item.siteVideo ? (
-                    <video
+                    <LazyVideo
                         src={item.siteVideo}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
                         className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition duration-500 ease-out"
                     />
                     ) : (

@@ -1,4 +1,3 @@
-
 export interface LiveTemplateItem {
   id: number;
   clientName: string;
